@@ -20,7 +20,6 @@ export default class DeleteBySlide extends Component {
             autoDistance
         } = this.props;
         let moveMax = width || 70;
-        console.log(moveMax);
         let moveAuto = autoDistance || 15;
         let moveMin = 5;
         let multiple = 3;

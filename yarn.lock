@@ -6526,6 +6526,25 @@ react-lazy-load@^3.0.12:
     lodash.throttle "^4.0.0"
     prop-types "^15.5.8"
 
+react-left-slide-delete@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-left-slide-delete/-/react-left-slide-delete-1.0.1.tgz#02c1c855d233b47ace9937410b4d3e039881ca31"
+  dependencies:
+    antd "^3.3.3"
+    mobx "^3.2.2"
+    mobx-react "^4.2.2"
+    promise.prototype.finally "^3.0.0"
+    prop-type "^0.0.1"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-keeper "^2.1.7"
+    react-router "^4.2.0"
+    react-router-dom "^4.2.2"
+    reactjs-pull-load "^1.0.3"
+    superagent "^3.6.0"
+    superagent-promise "^1.1.0"
+    webpack-node-externals "^1.7.2"
+
 react-lifecycles-compat@^3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
