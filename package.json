@@ -1,6 +1,6 @@
 {
     "name": "react-left-slide-delete",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "React compopnent pull down refresh and pull up load more",
     "main": "./dist/index.js",
     "author": "im04",
@@ -62,6 +62,7 @@
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "react-keeper": "^2.1.7",
+        "react-left-slide-delete": "^1.0.1",
         "react-router": "^4.2.0",
         "react-router-dom": "^4.2.2",
         "reactjs-pull-load": "^1.0.3",
