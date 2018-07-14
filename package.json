@@ -1,14 +1,14 @@
 {
     "name": "react-left-slide-delete",
-    "version": "1.0.5",
-    "description": "React compopnent pull down refresh and pull up load more",
+    "version": "1.0.6",
+    "description": "左滑删除,LeftSlideDel",
     "main": "./dist/index.js",
     "author": "im04",
     "repository": "https://github.com/im04/react-left-slide-delete",
     "license": "MIT",
     "keywords": [
-        "pullLoad",
-        "load",
+        "swiperDel",
+        "LeftSlideDel",
         "react"
     ],
     "devDependencies": {
