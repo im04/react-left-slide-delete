@@ -1,0 +1,26 @@
+.content {
+	position: relative;
+}
+.content:global(.active) {
+	/*transition: transform .2s ease-in-out;*/
+}
+.body {
+
+}
+.deleteBtn {
+	text-align: center;
+	position: absolute;
+	width: 70px;
+	left: 100%;
+	top: 0;
+	bottom: 0;
+	background-color: #f32241;
+}
+.btn {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 18px;
+}
