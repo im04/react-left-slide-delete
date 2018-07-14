@@ -62,7 +62,7 @@
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "react-keeper": "^2.1.7",
-        "react-left-slide-delete": "^1.0.3",
+        "react-left-slide-delete": "^1.0.4",
         "react-router": "^4.2.0",
         "react-router-dom": "^4.2.2",
         "reactjs-pull-load": "^1.0.3",

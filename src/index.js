@@ -97,9 +97,9 @@ export default class DeleteBySlide extends Component {
             width
         } = this.props;
         return (
-            <div style={{overflow:'hidden'}}>
+            <div className={className || ''} style={{overflow:'hidden'}}>
                 <div
-                    className={className ? style.content + ` ${className}` : style.content}
+                    className={style.content}
                     onTouchStart = { ev => this.onStart(ev) }
                 >
                     <div className={style.body}>
