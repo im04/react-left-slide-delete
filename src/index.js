@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import style from './index.mcss';
+import style from './index.css';
 import PropTypes from 'prop-types'
 export default class DeleteBySlide extends Component {
     static propTypes = {
@@ -20,6 +20,7 @@ export default class DeleteBySlide extends Component {
             autoDistance
         } = this.props;
         let moveMax = width || 70;
+        console.log(moveMax);
         let moveAuto = autoDistance || 15;
         let moveMin = 5;
         let multiple = 3;
@@ -38,7 +39,7 @@ export default class DeleteBySlide extends Component {
 
         function setLeft() {
             if (!isLeft) {
-                currentTarget.style.transform = 'translateX(-70px)';
+                currentTarget.style.transform = `translateX(-${moveMax}px)`;
                 isLeft = true;
             }
         }
@@ -56,16 +57,16 @@ export default class DeleteBySlide extends Component {
             if (m > moveMax) return setRight();
             flag = m < moveAuto;
             currentTarget.style.transform = `translateX(${m - moveMax}px)`;
+            e.cancelable && e.preventDefault();
             e.stopPropagation();
-            e.preventDefault();
         } : function(e) { // 左滑
             let m = easing(e.touches[0].clientX - startX);
             if (m > -moveMin) return;
             if (m < -moveMax)return setLeft();
             flag = m < -moveAuto;
             currentTarget.style.transform = `translateX(${m}px)`;
+            e.cancelable && e.preventDefault();
             e.stopPropagation();
-            e.preventDefault();
         };
         let end = function(e) {
             if (flag) {
@@ -81,9 +82,14 @@ export default class DeleteBySlide extends Component {
             }, false);
             currentTarget.removeEventListener('touchmove', move);
             currentTarget.removeEventListener('touchend', end);
+            return true;
         };
-        currentTarget.addEventListener('touchmove', move, false);
-        currentTarget.addEventListener('touchend', end, false);
+        currentTarget.addEventListener('touchmove', move, {
+            passive: false
+        }, false);
+        currentTarget.addEventListener('touchend', end, {
+            passive: false
+        }, false);
     }
     render() {
         const {
@@ -92,17 +98,19 @@ export default class DeleteBySlide extends Component {
             width
         } = this.props;
         return (
-            <div
-                className={className ? style.content + ` ${className}` : style.content}
-                onTouchStart = { ev => this.onStart(ev) }
-            >
-                <div className={style.body}>
-                    {
-                        children
-                    }
-                </div>
-                <div className={style.deleteBtn} style={width && {width}} onClick={this.onDelete}>
-                    <div className={style.btn}>删除</div>
+            <div style={{overflow:'hidden'}}>
+                <div
+                    className={className ? style.content + ` ${className}` : style.content}
+                    onTouchStart = { ev => this.onStart(ev) }
+                >
+                    <div className={style.body}>
+                        {
+                            children
+                        }
+                    </div>
+                    <div className={style.deleteBtn} style={width && {width}} onClick={this.onDelete}>
+                        <div className={style.btn}>删除</div>
+                    </div>
                 </div>
             </div>
         )
