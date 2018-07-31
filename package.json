@@ -1,6 +1,6 @@
 {
     "name": "react-left-slide-delete",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "左滑删除,LeftSlideDel",
     "main": "./dist/index.js",
     "author": "im04",
