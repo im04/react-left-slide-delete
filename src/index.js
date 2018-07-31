@@ -7,14 +7,16 @@ export default class DeleteBySlide extends Component {
         width: PropTypes.number, // 按钮宽度 px
         autoDistance: PropTypes.number // 自动完成滑动宽度 px
     };
-
+    componentDidMount() {
+        this.refs.main.addEventListener('touchstart', this.onStart, false);
+    }
     onDelete = (ev) => {
         const {
             onDelete
         } = this.props;
         onDelete && onDelete(ev);
     };
-    onStart(ev) {
+    onStart = ev => {
         const {
             width,
             autoDistance
@@ -89,6 +91,8 @@ export default class DeleteBySlide extends Component {
         currentTarget.addEventListener('touchend', end, {
             passive: false
         }, false);
+        ev.preventDefault();
+        ev.stopPropagation();
     }
     render() {
         const {
@@ -100,8 +104,7 @@ export default class DeleteBySlide extends Component {
             <div className={className || ''} style={{overflow:'hidden'}}>
                 <div
                     className={style.content}
-                    onTouchStart = { ev => this.onStart(ev) }
-                >
+                    ref="main">
                     <div className={style.body}>
                         {
                             children

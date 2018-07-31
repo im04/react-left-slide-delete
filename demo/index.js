@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom';
-import Delete from 'react-left-slide-delete';
+import Delete from '../dist';//'react-left-slide-delete';
 class App extends React.Component {
     list = [0,1];
     render() {
