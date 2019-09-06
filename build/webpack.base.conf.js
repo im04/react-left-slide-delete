@@ -109,13 +109,13 @@ let config = {
 		/*new webpack.ProvidePlugin({
 			React: 'react',
 		}),*/
-		// new CopyWebpackPlugin([
-		// 	{
-		// 		from: path.resolve(__dirname, '../static'),
-		// 		to: './static',
-		// 		ignore: ['.*']
-		// 	}
-		// ])
+		new CopyWebpackPlugin([
+			{
+				from: path.resolve(__dirname, '../assets'),
+				to: './assets',
+				ignore: ['.*']
+			}
+		])
 	]
 };
 

@@ -1,21 +1,32 @@
 .content {
 	position: relative;
 }
-.content:global(.active) {
-	/*transition: transform .2s ease-in-out;*/
-}
-.body {
-
-}
 .deleteBtn {
 	text-align: center;
 	position: absolute;
-	width: 70px;
 	left: 100%;
 	top: 0;
 	bottom: 0;
-	background-color: #f32241;
 }
+
+.addressDel {
+  width: 61px;
+  height: 100%;
+  background: rgba(255, 53, 77, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text {
+  height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 20px;
+  text-align: center;
+}
+
 .btn {
 	position: absolute;
 	width: 100%;
