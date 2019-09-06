@@ -1,23 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom';
 import Delete from '../dist';//'react-left-slide-delete';
-const go = new Go();
-let instance;
-window.WebAssembly.instantiateStreaming(fetch("./assets/main.wasm"), go.importObject).then((result) => {
-  instance = result.instance;
-});
-window.runWASM = function() {
-  instance && go.run(instance);
-};
-window.runJS = function() {
-  let c = 0;
-  console.time('for');
-  for (let i = 10000000000; i > 0; i--) {
-    c++;
-  }
-  console.log(c);
-  console.timeEnd('for');
-};
 class App extends React.Component {
     list = [0,1];
     render() {

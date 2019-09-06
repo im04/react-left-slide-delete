@@ -1,15 +1,16 @@
 {
     "name": "react-left-slide-delete",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "左滑删除,LeftSlideDel",
     "main": "./dist/index.js",
     "author": "im04",
     "repository": "https://github.com/im04/react-left-slide-delete",
     "license": "MIT",
     "keywords": [
-        "swiperDel",
-        "LeftSlideDel",
-        "react"
+        "swiperDelete",
+        "LeftSlideDelete",
+        "react",
+        "左滑删除"
     ],
     "devDependencies": {
         "autoprefixer": "^8.2.0",
